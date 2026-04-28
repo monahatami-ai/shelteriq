@@ -26,6 +26,8 @@
 
   html { scroll-behavior: smooth; }
 
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--cream);
@@ -721,10 +723,6 @@
     font-weight: 300;
   }
 
-  @media (max-width: 1024px) {
-    .product-grid { grid-template-columns: 1fr 1fr; }
-  }
-
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; gap: 3rem; padding: 110px 1.5rem 60px; }
     .hero-visual { display: none; }
@@ -791,17 +789,17 @@
     <div class="hero-visual">
       <div class="floating-pill">🐾 Alpha partner: ACC NYC</div>
       <div class="hero-card">
-        <div class="hero-card-label">Real data — ACC system · 2017–2026</div>
+        <div class="hero-card-label">Real data — ACC system · 2017–2023</div>
         <div class="stat-row">
           <div class="stat-box">
             <div class="stat-label">Total animals on record</div>
-            <div class="stat-value">150,500</div>
+            <div class="stat-value">89,865</div>
             <div class="stat-change">Across all 5 boroughs</div>
           </div>
           <div class="stat-box">
-            <div class="stat-label">Animals adopted</div>
-            <div class="stat-value">26,103</div>
-            <div class="stat-change">+ offsite adoptions</div>
+            <div class="stat-label">Animals survived</div>
+            <div class="stat-value">76,205</div>
+            <div class="stat-change">84.8% live release rate</div>
           </div>
         </div>
         <div class="hero-card-label" style="margin-top:4px;">Annual intake volume (peak years)</div>
@@ -851,7 +849,7 @@
     </div>
     <div class="acc-info-cards">
       <div class="acc-card">
-        <div class="acc-card-num">150,500</div>
+        <div class="acc-card-num">89,865</div>
         <div class="acc-card-desc">Animal records across all five NYC borough shelters since 2017</div>
       </div>
       <div class="acc-card">
@@ -859,12 +857,12 @@
         <div class="acc-card-desc">Shelters: Brooklyn, Manhattan, Bronx, Queens, Staten Island</div>
       </div>
       <div class="acc-card">
-        <div class="acc-card-num">26,103</div>
-        <div class="acc-card-desc">Animals adopted — plus thousands more transferred to rescue partners</div>
+        <div class="acc-card-num">84.8%</div>
+        <div class="acc-card-desc">Live release rate — 76,205 animals survived across all shelters</div>
       </div>
       <div class="acc-card">
-        <div class="acc-card-num">46,333</div>
-        <div class="acc-card-desc">Transfer-out outcomes — showing the scale of the rescue network pipeline</div>
+        <div class="acc-card-num">2,422</div>
+        <div class="acc-card-desc">Animals fostered — and growing, with 1,455 active foster families in NYC</div>
       </div>
     </div>
   </div>
@@ -875,7 +873,81 @@
   <div class="container">
     <div class="section-label">The Platform</div>
     <h2 class="section-title">What ShelterIQ builds</h2>
-    <p class="section-sub">Four interconnected capabilities designed to move shelters from reactive operations to predictive intelligence.</p>
+    <p class="section-sub">AI-powered tools purpose-built for municipal shelter systems — from predictive risk scoring to real-time leadership dashboards.</p>
+
+    <!-- LIVE PRODUCTS -->
+    <div style="margin-bottom:1rem;">
+      <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);margin-bottom:1.5rem;display:flex;align-items:center;gap:8px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:#16A34A;display:inline-block;animation:pulse 2s infinite;"></span>
+        Live demos · ACC NYC data
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:3rem;">
+
+        <!-- RISK PREDICTOR — LIVE -->
+        <a href="risk.html" style="text-decoration:none;background:white;border:1.5px solid var(--terracotta);border-radius:18px;padding:28px;display:block;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(199,91,58,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="position:absolute;top:16px;right:16px;background:rgba(22,163,74,0.1);color:#15803D;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:3px 8px;border-radius:20px;border:1px solid rgba(22,163,74,0.3);">LIVE</div>
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(199,91,58,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C75B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--dark-brown);margin-bottom:10px;">Euthanasia risk predictor</h3>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300;">89,865 animals scored across 6 risk factors. Filter by shelter, species, sex. Click any animal for full profile.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-size:11px;background:rgba(185,28,28,0.08);color:#B91C1C;padding:2px 8px;border-radius:20px;font-weight:500;">9,465 high risk</span>
+            <span style="font-size:11px;background:rgba(199,91,58,0.08);color:var(--terracotta);padding:2px 8px;border-radius:20px;font-weight:500;">85.1% accuracy</span>
+          </div>
+          <div style="margin-top:16px;font-size:13px;color:var(--terracotta);font-weight:500;">View demo →</div>
+        </a>
+
+        <!-- ADOPTION MATCHER — LIVE -->
+        <a href="adopt.html" style="text-decoration:none;background:white;border:1.5px solid var(--terracotta);border-radius:18px;padding:28px;display:block;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(199,91,58,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="position:absolute;top:16px;right:16px;background:rgba(22,163,74,0.1);color:#15803D;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:3px 8px;border-radius:20px;border:1px solid rgba(22,163,74,0.3);">LIVE</div>
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(199,91,58,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C75B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--dark-brown);margin-bottom:10px;">Adoption matcher</h3>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300;">1,955 NYC people matched to 3,000 animals using lifestyle, experience, home type and behaviour compatibility.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-size:11px;background:rgba(21,128,61,0.08);color:#15803D;padding:2px 8px;border-radius:20px;font-weight:500;">1,455 real fosters</span>
+            <span style="font-size:11px;background:rgba(199,91,58,0.08);color:var(--terracotta);padding:2px 8px;border-radius:20px;font-weight:500;">6-factor match</span>
+          </div>
+          <div style="margin-top:16px;font-size:13px;color:var(--terracotta);font-weight:500;">Try the matcher →</div>
+        </a>
+
+        <!-- LEADERSHIP DASHBOARD — LIVE -->
+        <a href="dashboard.html" style="text-decoration:none;background:white;border:1.5px solid var(--terracotta);border-radius:18px;padding:28px;display:block;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(199,91,58,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="position:absolute;top:16px;right:16px;background:rgba(22,163,74,0.1);color:#15803D;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:3px 8px;border-radius:20px;border:1px solid rgba(22,163,74,0.3);">LIVE</div>
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(199,91,58,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C75B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--dark-brown);margin-bottom:10px;">Leadership dashboard</h3>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300;">Intake trends, live release rates, shelter KPIs, behaviour distribution, species outcomes — 8 charts, AI insights.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-size:11px;background:rgba(21,128,61,0.08);color:#15803D;padding:2px 8px;border-radius:20px;font-weight:500;">8 live charts</span>
+            <span style="font-size:11px;background:rgba(199,91,58,0.08);color:var(--terracotta);padding:2px 8px;border-radius:20px;font-weight:500;">AI insights</span>
+          </div>
+          <div style="margin-top:16px;font-size:13px;color:var(--terracotta);font-weight:500;">Open dashboard →</div>
+        </a>
+
+        <!-- INTAKE FORECASTING — LIVE -->
+        <a href="forecast.html" style="text-decoration:none;background:white;border:1.5px solid var(--terracotta);border-radius:18px;padding:28px;display:block;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(199,91,58,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="position:absolute;top:16px;right:16px;background:rgba(22,163,74,0.1);color:#15803D;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:3px 8px;border-radius:20px;border:1px solid rgba(22,163,74,0.3);">LIVE</div>
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(199,91,58,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C75B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--dark-brown);margin-bottom:10px;">Intake forecasting</h3>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300;">12-month forward projections by shelter and species. Seasonal model trained on 66 months of ACC data — plan staffing and foster recruitment ahead of surges.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-size:11px;background:rgba(21,128,61,0.08);color:#15803D;padding:2px 8px;border-radius:20px;font-weight:500;">12-mo forecast</span>
+            <span style="font-size:11px;background:rgba(199,91,58,0.08);color:var(--terracotta);padding:2px 8px;border-radius:20px;font-weight:500;">All 5 boroughs</span>
+          </div>
+          <div style="margin-top:16px;font-size:13px;color:var(--terracotta);font-weight:500;">View forecast →</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- PLATFORM CAPABILITIES -->
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.5rem;">Platform capabilities</div>
     <div class="product-grid">
       <div class="product-card">
         <div class="product-icon">
