@@ -723,44 +723,20 @@
 
   @media (max-width: 1024px) {
     .product-grid { grid-template-columns: 1fr 1fr; }
-    .team-grid { grid-template-columns: 1fr 1fr; }
-    .approach-steps { grid-template-columns: 1fr; }
-    .approach-step:not(:last-child) { border-right: none; border-bottom: 0.5px solid var(--border-strong); }
-    .mission-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-    .hero { grid-template-columns: 1fr; gap: 3rem; padding: 110px 2rem 60px; }
-    .hero-visual { display: none; }
   }
 
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; gap: 3rem; padding: 100px 1.2rem 50px; }
+    .hero { grid-template-columns: 1fr; gap: 3rem; padding: 110px 1.5rem 60px; }
     .hero-visual { display: none; }
-    .mission-inner { grid-template-columns: 1fr; gap: 2rem; }
-    .acc-info-cards { grid-template-columns: 1fr 1fr; }
+    .mission-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .product-grid { grid-template-columns: 1fr; }
     .team-grid { grid-template-columns: 1fr; }
-    .team-card.featured { transform: none; }
     .approach-steps { grid-template-columns: 1fr; }
     .approach-step:not(:last-child) { border-right: none; border-bottom: 0.5px solid var(--border-strong); }
-    nav { padding: 0 1.2rem; }
+    nav { padding: 0 1.5rem; }
     .nav-links { display: none; }
-    section { padding: 50px 1.2rem; }
+    section { padding: 60px 1.5rem; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
-    .section-title { font-size: 1.6rem; }
-    .hero h1 { font-size: 2rem; }
-    .hero-sub { font-size: 15px; }
-    .team-card-body { padding: 18px 20px; }
-    .stat-row { grid-template-columns: 1fr 1fr; }
-  }
-
-  @media (max-width: 480px) {
-    .product-grid { grid-template-columns: 1fr; gap: 16px; }
-    .team-grid { grid-template-columns: 1fr; gap: 20px; }
-    .acc-info-cards { grid-template-columns: 1fr; }
-    .hero-actions { flex-direction: column; }
-    .btn-primary, .btn-secondary { text-align: center; }
-    .section-title { font-size: 1.4rem; }
-    nav { padding: 0 1rem; }
-    section { padding: 40px 1rem; }
   }
 </style>
 </head>
